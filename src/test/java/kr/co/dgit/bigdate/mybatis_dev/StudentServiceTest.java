@@ -24,5 +24,4 @@ public class StudentServiceTest {
 		Student student = studentService.findStudentById(1);
 		Assert.assertNotNull(student);
 	}
-
 }
