@@ -6,7 +6,7 @@
 		<setting name="mapUnderscoreToCamelCase" value="true" />		
 	</settings>
 	<typeAliases>
-		<!-- <typeAlias type="kr.co.dgit.school.dto.Student" alias="Student" /> -->
+		
 		<package name="kr.co.dgit.bigdate.mybatis_dev.dto"/>
 	</typeAliases>
 	<typeHandlers>
