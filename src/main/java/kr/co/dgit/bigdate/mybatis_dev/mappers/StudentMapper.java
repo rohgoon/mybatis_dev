@@ -1,4 +1,4 @@
-package kr.co.dgit.bigdate.mybatis_dev.dao;
+package kr.co.dgit.bigdate.mybatis_dev.mappers;
 
 import kr.co.dgit.bigdate.mybatis_dev.dto.Student;
 

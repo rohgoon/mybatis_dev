@@ -3,8 +3,8 @@ package kr.co.dgit.bigdate.mybatis_dev.service;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.log4j.Logger;
 
-import kr.co.dgit.bigdate.mybatis_dev.dao.StudentMapper;
 import kr.co.dgit.bigdate.mybatis_dev.dto.Student;
+import kr.co.dgit.bigdate.mybatis_dev.mappers.StudentMapper;
 import kr.co.dgit.bigdate.mybatis_dev.util.MyBatisSqlSessionFactory;
 
 public class StudentService {
