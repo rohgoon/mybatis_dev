@@ -1,6 +1,4 @@
 package kr.co.dgit.bigdate.mybatis_dev;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import org.junit.AfterClass;
@@ -8,9 +6,8 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import kr.co.dgit.school.dto.PhoneNumber;
-import kr.co.dgit.school.dto.Student;
-import kr.co.dgit.school.service.StudentService;
+import kr.co.dgit.bigdate.mybatis_dev.dto.Student;
+import kr.co.dgit.bigdate.mybatis_dev.service.StudentService;
 
 public class StudentServiceTest {
 	private static StudentService studentService;
@@ -24,12 +21,12 @@ public class StudentServiceTest {
 		studentService = null;
 	}
 
-	@Test
+	/*@Test
 	public void testSelectByAll() {
 		List<Student> list = studentService.findAllStudent();
 		Assert.assertNotNull(list);
 	}
-	/*@Test
+	@Test
 	public void testSelectByNo() {
 		Student std = studentService.selectByNo(1);
 		Assert.assertNotNull(std);
