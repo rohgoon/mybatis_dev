@@ -26,13 +26,13 @@ public class StudentServiceTest {
 		studentService = null;
 	}
 
-	@Test
+	/*@Test
 	public void testFindStudentById() {
 		Student student = studentService.findStudentById(1);
 		Assert.assertNotNull(student);
 	}
 
-	/*
+	
 	 * @Test public void testInsertStudent() { Calendar cal =
 	 * Calendar.getInstance();
 	 * 
@@ -85,7 +85,7 @@ public class StudentServiceTest {
 		
 		int delStudent = studentService.deleteStudent(6);
 		Assert.assertSame(1, delStudent);
-	}*/
+	}
 	
 	@Test
 	public void testFindStudentByAll() {
@@ -101,5 +101,13 @@ public class StudentServiceTest {
 	public void testFindStudentByIdForMap() {
 		Map<String, Object> student = studentService.findStudentByIdForMap(1);
 		Assert.assertNotNull(student);
+	}*/
+	
+	//////////
+	@Test
+	public void testSelectStudentWithAddressResult() {
+		Student student = studentService.selectStudentWithAddressResult(1);
+		Assert.assertNotNull(student);
 	}
+	
 }

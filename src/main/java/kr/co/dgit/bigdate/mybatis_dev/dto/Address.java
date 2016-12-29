@@ -7,19 +7,6 @@ public class Address {
 	private String zip;
 	private String country;
 	
-	public Address() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Address(int addrId, String street, String city, String zip, String country) {
-		super();
-		this.addrId = addrId;
-		this.street = street;
-		this.city = city;
-		this.zip = zip;
-		this.country = country;
-	}
-	
 	
 	public int getAddrId() {
 		return addrId;

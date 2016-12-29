@@ -14,6 +14,7 @@ public interface StudentMapper {
 	int insertStudent(Student std);
 	int insertStudentAutoInc(Student student);
 	int updateStudent(Student student);	
-	int deleteStudent(int id);
-	
+	int deleteStudent(int id);	
+	/////// Join
+	Student selectStudentWithAddressResult(int id);
 }

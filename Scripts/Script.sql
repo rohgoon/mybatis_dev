@@ -194,3 +194,7 @@ INSERT INTO COURSE_ENROLLMENT (COURSE_ID,STUD_ID) VALUES
  
  select stud_id, name, email,phone,dob from students;
  
+ select stud_id, name, email,phone, a.addr_id, a.street, a.city, a.state, a.zip, a.country
+ from students s inner join addresses a on s.addr_id=a.addr_id
+ where stud_id=1;
+ 

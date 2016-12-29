@@ -8,26 +8,25 @@ public class Student {
 	private String email;
 	private PhoneNumber phone;
 	private Date dob;
-	private int addrId;
+	private int address;
 	
 	public Student() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	public Student(int studId) {
-		super();
 		this.studId = studId;
 	}
 	
 
 	public Student(int studId, String name, String email, PhoneNumber phone, Date dob, int addrId) {
-		super();
+		
 		this.studId = studId;
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
 		this.dob = dob;
-		this.addrId = addrId;
+		this.address = addrId;
 	}
 
 	public int getStudId() {
@@ -70,18 +69,19 @@ public class Student {
 		this.dob = dob;
 	}
 	
-	public int getAddrId() {
-		return addrId;
+
+	public int getAddress() {
+		return address;
 	}
 
-	public void setAddrId(int addrId) {
-		this.addrId = addrId;
+	public void setAddress(int address) {
+		this.address = address;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Student [studId=%s, name=%s, email=%s, phone=%s, dob=%s, addrId=%s]", studId, name, email,
-				phone, dob, addrId);
+		return String.format("Student [studId=%s, name=%s, email=%s, phone=%s, dob=%s, address=%s]", studId, name, email,
+				phone, dob, address);
 	}
 
 	
