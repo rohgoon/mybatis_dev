@@ -182,3 +182,10 @@ INSERT INTO COURSE_ENROLLMENT (COURSE_ID,STUD_ID) VALUES
 
  insert into students(stud_id,name,email,phone,dob)
  values(3,'강보미','kbm@asd.asd','010-111-1111','2016-12-28');
+ 
+ insert into students(name,email,phone,dob)
+ values('강보미2','kbm2@asd.asd','010-111-1111','2016-12-28');
+ 
+ set foreign_key_checks =1;
+ 
+ 
