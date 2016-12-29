@@ -8,7 +8,7 @@ public class Student {
 	private String email;
 	private PhoneNumber phone;
 	private Date dob;
-	private int address;
+	private Address address;
 	
 	public Student() {
 		// TODO Auto-generated constructor stub
@@ -19,7 +19,7 @@ public class Student {
 	}
 	
 
-	public Student(int studId, String name, String email, PhoneNumber phone, Date dob, int addrId) {
+	public Student(int studId, String name, String email, PhoneNumber phone, Date dob, Address addrId) {
 		
 		this.studId = studId;
 		this.name = name;
@@ -70,11 +70,11 @@ public class Student {
 	}
 	
 
-	public int getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 
-	public void setAddress(int address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 

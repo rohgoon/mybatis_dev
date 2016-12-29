@@ -2,12 +2,21 @@ package kr.co.dgit.bigdate.mybatis_dev.dto;
 
 public class Address {
 	private int addrId;
-	private String street;
+	private String street;	
 	private String city;
+	private String state;
 	private String zip;
 	private String country;
 	
 	
+	
+	
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
 	public int getAddrId() {
 		return addrId;
 	}
@@ -15,10 +24,10 @@ public class Address {
 		this.addrId = addrId;
 	}
 	public String getStreet() {
-		return street;
+		return state;
 	}
 	public void setStreet(String street) {
-		this.street = street;
+		this.state = street;
 	}
 	public String getCity() {
 		return city;
@@ -40,9 +49,12 @@ public class Address {
 	}
 	@Override
 	public String toString() {
-		return String.format("Address [%s, %s, %s, %s, %s]", addrId, street, city, zip,
-				country);
+		return String.format("Address [%s, %s, %s, %s, %s, %s]", addrId, street,
+				city, state, zip, country);
 	}
+	
+	
+	
 	
 	
 }
