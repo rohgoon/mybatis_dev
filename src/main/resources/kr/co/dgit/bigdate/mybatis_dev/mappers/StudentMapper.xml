@@ -19,4 +19,7 @@
 	<select id="findStudentByAll" resultType="Student">
 		select stud_id, name, email,phone,dob from students
 	</select>
+	<select id="findStudentByIdForMap" parameterType="int" resultType="map">
+		select stud_id, name, email, dob from students where stud_id=#{studId}
+	</select>
 </mapper>

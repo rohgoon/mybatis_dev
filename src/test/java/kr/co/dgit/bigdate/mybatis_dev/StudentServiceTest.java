@@ -2,6 +2,7 @@ package kr.co.dgit.bigdate.mybatis_dev;
 
 import java.util.Calendar;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -94,5 +95,11 @@ public class StudentServiceTest {
 			Assert.assertNotNull(s);
 		}
 		
+	}
+	
+	@Test
+	public void testFindStudentByIdForMap() {
+		Map<String, Object> student = studentService.findStudentByIdForMap(1);
+		Assert.assertNotNull(student);
 	}
 }
