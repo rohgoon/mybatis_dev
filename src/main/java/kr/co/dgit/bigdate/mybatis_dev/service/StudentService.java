@@ -134,5 +134,20 @@ public class StudentService {
 		
 		
 	}
+	
+	public List<Map<String, Object>> findStudentByAllForMap(){
+		if (logger.isDebugEnabled()) {
+			logger.debug("findStudentByAllForMap() - start");
+		}
+		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
+		try {
+			StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+			return studentMapper.findStudentByAllForMap();
+		} finally {
+			sqlSession.close();
+		}
+		
+		
+	}
 
 }

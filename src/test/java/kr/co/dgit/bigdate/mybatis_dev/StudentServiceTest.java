@@ -1,15 +1,14 @@
 package kr.co.dgit.bigdate.mybatis_dev;
 
-import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import junit.framework.Assert;
-import kr.co.dgit.bigdate.mybatis_dev.dto.PhoneNumber;
 import kr.co.dgit.bigdate.mybatis_dev.dto.Student;
 import kr.co.dgit.bigdate.mybatis_dev.service.StudentService;
 
@@ -101,5 +100,16 @@ public class StudentServiceTest {
 	public void testFindStudentByIdForMap() {
 		Map<String, Object> student = studentService.findStudentByIdForMap(1);
 		Assert.assertNotNull(student);
+		
+		for(Entry<String, Object> c :student.entrySet()){
+			System.out.printf("%s -> %s  %n", c.getKey(), c.getValue());
+		}
+	}
+	
+	@Test
+	public void testFindStudentByAllForMap(){
+		List<Map<String, Object>> student = studentService.findStudentByAllForMap();
+		Assert.assertNotNull(student);
+		
 	}
 }
