@@ -8,6 +8,7 @@ public class Student {
 	private String email;
 	private PhoneNumber phone;
 	private Date dob;
+	private int addrId;
 	
 	public Student() {
 		// TODO Auto-generated constructor stub
@@ -17,14 +18,16 @@ public class Student {
 		super();
 		this.studId = studId;
 	}
+	
 
-	public Student(int studId, String name, String email, PhoneNumber phone, Date dob) {
+	public Student(int studId, String name, String email, PhoneNumber phone, Date dob, int addrId) {
 		super();
 		this.studId = studId;
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
 		this.dob = dob;
+		this.addrId = addrId;
 	}
 
 	public int getStudId() {
@@ -65,6 +68,14 @@ public class Student {
 
 	public void setDob(Date dob) {
 		this.dob = dob;
+	}
+	
+	public int getAddrId() {
+		return addrId;
+	}
+
+	public void setAddrId(int addrId) {
+		this.addrId = addrId;
 	}
 
 	@Override
