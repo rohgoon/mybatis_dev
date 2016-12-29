@@ -80,8 +80,10 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return String.format("Student [studId=%s, name=%s, email=%s, phone=%s, dob=%s]", studId, name, email, phone,
-				dob);
+		return String.format("Student [studId=%s, name=%s, email=%s, phone=%s, dob=%s, addrId=%s]", studId, name, email,
+				phone, dob, addrId);
 	}
+
+	
 	
 }
