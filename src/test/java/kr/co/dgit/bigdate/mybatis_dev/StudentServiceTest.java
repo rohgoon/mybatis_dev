@@ -42,7 +42,7 @@ public class StudentServiceTest {
 	 * 
 	 * int res= studentService.insertStudent(insStd); Assert.assertEquals(1,
 	 * res); }
-	 */
+	 
 	@Test
 	public void testInsertStudentAutoInc() {
 		Calendar cal = Calendar.getInstance();
@@ -60,5 +60,29 @@ public class StudentServiceTest {
 		Assert.assertEquals(1, res);
 	}
 	
+	@Test
+	public void testUpdateStudent() {
+		Calendar cal = Calendar.getInstance();
+
+		cal.clear();
+		cal.set(1980, 0, 1);
+
+		Student upStd = new Student();
+		upStd.setStudId(6);
+		upStd.setName("노창균2");
+		upStd.setEmail("rcg2@asd.asd");
+		upStd.setPhone(new PhoneNumber("010-123-1234"));
+		upStd.setDob(cal.getTime());
+
+		int res = studentService.updateStudent(upStd);
+		Assert.assertEquals(1, res);
+	}
+	
+	@Test
+	public void testDeleteStudent() {
+		
+		int delStudent = studentService.deleteStudent(6);
+		Assert.assertSame(1, delStudent);
+	}*/
 	
 }

@@ -181,11 +181,15 @@ INSERT INTO COURSE_ENROLLMENT (COURSE_ID,STUD_ID) VALUES
  select stud_id, name, email, dob from students where stud_id=1;
 
  insert into students(stud_id,name,email,phone,dob)
- values(3,'강보미','kbm@asd.asd','010-111-1111','2016-12-28');
+ values(5,'강보미','kbm@asd.asd','010-111-1111','2016-12-28');
  
  insert into students(name,email,phone,dob)
  values('강보미2','kbm2@asd.asd','010-111-1111','2016-12-28');
  
  set foreign_key_checks =1;
+ 
+ update students set name='노창균', email='rcg@asd.asd', phone='010-789-7896',dob='1983-12-10' where stud_id='5';
+ 
+ delete from students where stud_id=7;
  
  
