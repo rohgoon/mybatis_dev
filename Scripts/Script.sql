@@ -192,4 +192,5 @@ INSERT INTO COURSE_ENROLLMENT (COURSE_ID,STUD_ID) VALUES
  
  delete from students where stud_id=7;
  
+ select stud_id, name, email,phone,dob from students;
  

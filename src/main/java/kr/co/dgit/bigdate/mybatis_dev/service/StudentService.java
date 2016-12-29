@@ -1,5 +1,7 @@
 package kr.co.dgit.bigdate.mybatis_dev.service;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.log4j.Logger;
 
@@ -100,6 +102,21 @@ public class StudentService {
 			sqlSession.close();
 		}
 
+	}
+	
+	public List<Student> findStudentByAll(){
+		if (logger.isDebugEnabled()) {
+			logger.debug("findStudentByAll() - start");
+		}
+		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
+		try {
+			StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+			return studentMapper.findStudentByAll();
+		} finally {
+			sqlSession.close();
+		}
+		
+		
 	}
 
 }

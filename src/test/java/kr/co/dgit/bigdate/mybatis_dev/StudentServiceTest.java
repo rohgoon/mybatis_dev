@@ -1,6 +1,7 @@
 package kr.co.dgit.bigdate.mybatis_dev;
 
 import java.util.Calendar;
+import java.util.List;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -85,4 +86,13 @@ public class StudentServiceTest {
 		Assert.assertSame(1, delStudent);
 	}*/
 	
+	@Test
+	public void testFindStudentByAll() {
+		List<Student> student = studentService.findStudentByAll();
+		Assert.assertNotNull(student);
+		for (Student s : student) {
+			Assert.assertNotNull(s);
+		}
+		
+	}
 }
