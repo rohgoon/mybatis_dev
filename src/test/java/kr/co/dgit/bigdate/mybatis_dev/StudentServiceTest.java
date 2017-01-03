@@ -1,15 +1,10 @@
 package kr.co.dgit.bigdate.mybatis_dev;
 
-import java.util.Calendar;
-import java.util.List;
-import java.util.Map;
-
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import junit.framework.Assert;
-import kr.co.dgit.bigdate.mybatis_dev.dto.PhoneNumber;
 import kr.co.dgit.bigdate.mybatis_dev.dto.Student;
 import kr.co.dgit.bigdate.mybatis_dev.service.StudentService;
 
