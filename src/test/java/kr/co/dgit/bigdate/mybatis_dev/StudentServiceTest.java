@@ -101,12 +101,18 @@ public class StudentServiceTest {
 	public void testFindStudentByIdForMap() {
 		Map<String, Object> student = studentService.findStudentByIdForMap(1);
 		Assert.assertNotNull(student);
-	}*/
+	}
 	
 	//////////
 	@Test
 	public void testSelectStudentWithAddressResult() {
 		Student student = studentService.selectStudentWithAddressResult(1);
+		Assert.assertNotNull(student);
+	}*/
+	
+	@Test
+	public void testSelectStudentWithAddress() {
+		Student student = studentService.selectStudentWithAddress(1);
 		Assert.assertNotNull(student);
 	}
 	

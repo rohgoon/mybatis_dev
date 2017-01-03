@@ -16,5 +16,7 @@ public interface StudentMapper {
 	int updateStudent(Student student);	
 	int deleteStudent(int id);	
 	/////// Join
-	Student selectStudentWithAddressResult(int id);
+	Student selectStudentWithAddressResult(int id); // 1회만 할 경우 추천
+	
+	Student selectStudentWithAddress(int id); // 일대일 매핑 추천 방법
 }

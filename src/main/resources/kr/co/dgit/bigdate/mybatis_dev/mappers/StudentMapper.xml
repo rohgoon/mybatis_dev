@@ -40,4 +40,15 @@
 		select stud_id, name, email,phone, a.addr_id, a.street, a.city, a.state, a.zip, a.country from students s inner join addresses a on s.addr_id=a.addr_id where stud_id=#{studId}
 	</select>
 	
+	<resultMap id="StudentWithAddressResult" type="Student">
+		<id property="studId" column="stud_id" />
+		<result property="name" column="name" />
+		<result property="email" column="email" />
+		<result property="phone" column="phone" />
+		<result property="dob" column="dob" />
+		<association resultMap="kr.co.dgit.bigdate.mybatis_dev.mappers.AddressMapper.AddrRes" property="address"></association>
+	</resultMap>
+	<select id="selectStudentWithAddress" parameterType="int" resultMap="StudentWithAddressResult">
+		select stud_id, name, email,phone, a.addr_id, a.street, a.city, a.state, a.zip, a.country from students s inner join addresses a on s.addr_id=a.addr_id where stud_id=#{studId}
+	</select>
 </mapper>
