@@ -1,10 +1,14 @@
 package kr.co.dgit.bigdate.mybatis_dev;
 
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import kr.co.dgit.bigdate.mybatis_dev.dto.PhoneNumber;
 import kr.co.dgit.bigdate.mybatis_dev.dto.Student;
 import kr.co.dgit.bigdate.mybatis_dev.service.StudentService;
 
@@ -114,12 +118,33 @@ public class StudentServiceTest {
 	public void testSelectStudentWithAddressResult() {
 		Student student = studentService.selectStudentWithAddressResult(1);
 		Assert.assertNotNull(student);
-	}*/
+	}
 	
 	@Test
 	public void testSelectStudentWithAddress() {
 		Student student = studentService.selectStudentWithAddress(1);
 		Assert.assertNotNull(student);
+	}*/
+	
+	@Test
+	public void testUpdateSetStudent() {
+		
+
+		Student upStd = new Student();
+		upStd.setStudId(1);
+		upStd.setEmail("rcg11@asd.asd");
+		upStd.setPhone(new PhoneNumber("010-654-6534"));
+		upStd.setDob(new Date());
+		
+		int result = studentService.updateSetStudent(upStd);
+		Assert.assertSame(1, result);
+		
+		upStd.setEmail("timoth@gmail.com");
+		upStd.setPhone(new PhoneNumber("011-544-6534"));
+		upStd.setDob(new GregorianCalendar(1988,04,25).getTime());
+		
+		result = studentService.updateSetStudent(upStd);
+		Assert.assertSame(1, result);
 	}
 	
 }

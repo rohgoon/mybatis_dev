@@ -19,4 +19,7 @@ public interface StudentMapper {
 	Student selectStudentWithAddressResult(int id); // 1회만 할 경우 추천
 	
 	Student selectStudentWithAddress(int id); // 일대일 매핑 추천 방법
+	
+
+	int updateSetStudent(Student student);
 }

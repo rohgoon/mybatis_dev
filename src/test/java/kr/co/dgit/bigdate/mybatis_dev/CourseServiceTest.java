@@ -1,6 +1,6 @@
 package kr.co.dgit.bigdate.mybatis_dev;
 
-import java.util.GregorianCalendar;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +27,7 @@ public class CourseServiceTest {
 	}
 
 	
-	@Test
+	/*@Test
 	public void testSearchCourses() {
 		GregorianCalendar cal = new GregorianCalendar(2013, 1, 1);
 		Map<String, Object> map = new HashMap<>();
@@ -54,5 +54,56 @@ public class CourseServiceTest {
 		Assert.assertNotNull(courses);
 		
 	}
+	@Test
+	public void testSearchWhereCourses() {
+		
+		Map<String, Object> map = new HashMap<>();
+		
+		List<Course> courses = courseService.searchWhereCourses(map);
+		Assert.assertNotNull(courses);
+		
+		map.put("tutorId", 2);
+		courses = courseService.searchWhereCourses(map);
+		Assert.assertNotNull(courses);
+		
+		map.put("courseName", "%java%");
+		courses = courseService.searchWhereCourses(map);
+		Assert.assertNotNull(courses);
+		
+		map.clear();
+		map.put("endDate", new Date());
+		courses = courseService.searchWhereCourses(map);
+		Assert.assertNotNull(courses);
+	}
 	
+	@Test
+	public void testSearchTrimCourses() {
+		
+		Map<String, Object> map = new HashMap<>();
+		
+		List<Course> courses = courseService.searchTrimCourses(map);
+		Assert.assertNotNull(courses);
+		
+		map.put("tutorId", 2);
+		courses = courseService.searchWhereCourses(map);
+		Assert.assertNotNull(courses);
+		
+		map.put("courseName", "%java%");
+		courses = courseService.searchWhereCourses(map);
+		Assert.assertNotNull(courses);
+	}*/
+	
+	@Test
+	public void testSearchForeachCoursesByTutors() {
+		List<Integer> tutorIds = new ArrayList<>(); 
+		tutorIds.add(1);
+		tutorIds.add(2);
+		
+		Map<String, Object> map = new HashMap<>();
+		map.put("tutorIds", tutorIds);
+		
+		List<Course> courses = courseService.searchForeachCoursesByTutors(map);
+		Assert.assertNotNull(courses);
+		
+	}
 }

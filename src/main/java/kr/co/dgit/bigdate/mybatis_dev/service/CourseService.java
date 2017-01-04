@@ -50,6 +50,52 @@ public class CourseService {
 		}
 
 	}
+	public List<Course> searchWhereCourses(Map<String, Object> map) {
+		if (logger.isDebugEnabled()) {
+			logger.debug("searchWhereCourses(Map<String, Object>) - start");
+		}
+
+		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
+		try {
+			CourseMapper courseMapper = sqlSession.getMapper(CourseMapper.class);
+			return courseMapper.searchWhereCourses(map);
+		} finally {
+			sqlSession.close();
+		}
+
+	}
+	
+	public List<Course> searchTrimCourses(Map<String, Object> map) {
+		if (logger.isDebugEnabled()) {
+			logger.debug("searchWhereCourses(Map<String, Object>) - start");
+		}
+
+		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
+		try {
+			CourseMapper courseMapper = sqlSession.getMapper(CourseMapper.class);
+			return courseMapper.searchTrimCourses(map);
+		} finally {
+			sqlSession.close();
+		}
+
+	}
+	
+	public List<Course> searchForeachCoursesByTutors(Map<String, Object> map) {
+		if (logger.isDebugEnabled()) {
+			logger.debug("searchWhereCourses(Map<String, Object>) - start");
+		}
+
+		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
+		try {
+			CourseMapper courseMapper = sqlSession.getMapper(CourseMapper.class);
+			return courseMapper.searchForeachCoursesByTutors(map);
+		} finally {
+			sqlSession.close();
+		}
+
+	}
+	
+	
 
 
 }
