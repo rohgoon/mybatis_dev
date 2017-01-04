@@ -8,23 +8,25 @@ public class Student {
 	private String email;
 	private PhoneNumber phone;
 	private Date dob;
+	private Address address;
 	
 	public Student() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	public Student(int studId) {
-		super();
 		this.studId = studId;
 	}
+	
 
-	public Student(int studId, String name, String email, PhoneNumber phone, Date dob) {
-		super();
+	public Student(int studId, String name, String email, PhoneNumber phone, Date dob, Address addrId) {
+		
 		this.studId = studId;
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
 		this.dob = dob;
+		this.address = addrId;
 	}
 
 	public int getStudId() {
@@ -66,11 +68,22 @@ public class Student {
 	public void setDob(Date dob) {
 		this.dob = dob;
 	}
+	
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 	@Override
 	public String toString() {
-		return String.format("Student [studId=%s, name=%s, email=%s, phone=%s, dob=%s]", studId, name, email, phone,
-				dob);
+		return String.format("Student [studId=%s, name=%s, email=%s, phone=%s, dob=%s, address=%s]", studId, name, email,
+				phone, dob, address);
 	}
+
+	
 	
 }

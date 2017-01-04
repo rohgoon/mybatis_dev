@@ -70,7 +70,7 @@ public class StudentService {
 		}
 
 	}
-	
+
 	public int updateStudent(Student student) {
 		if (logger.isDebugEnabled()) {
 			logger.debug("updateStudent(Student) - start");
@@ -79,7 +79,7 @@ public class StudentService {
 		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
 		try {
 			StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
-			int res =studentMapper.updateStudent(student);
+			int res = studentMapper.updateStudent(student);
 			sqlSession.commit();
 			return res;
 		} finally {
@@ -87,7 +87,7 @@ public class StudentService {
 		}
 
 	}
-	
+
 	public int deleteStudent(int id) {
 		if (logger.isDebugEnabled()) {
 			logger.debug("updateStudent(Student) - start");
@@ -96,7 +96,7 @@ public class StudentService {
 		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
 		try {
 			StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
-			int res =studentMapper.deleteStudent(id);
+			int res = studentMapper.deleteStudent(id);
 			sqlSession.commit();
 			return res;
 		} finally {
@@ -104,8 +104,8 @@ public class StudentService {
 		}
 
 	}
-	
-	public List<Student> findStudentByAll(){
+
+	public List<Student> findStudentByAll() {
 		if (logger.isDebugEnabled()) {
 			logger.debug("findStudentByAll() - start");
 		}
@@ -116,11 +116,10 @@ public class StudentService {
 		} finally {
 			sqlSession.close();
 		}
-		
-		
+
 	}
-	
-	public Map<String, Object> findStudentByIdForMap(int id){
+
+	public Map<String, Object> findStudentByIdForMap(int id) {
 		if (logger.isDebugEnabled()) {
 			logger.debug("findStudentByIdForMap(int) - start");
 		}
@@ -131,8 +130,39 @@ public class StudentService {
 		} finally {
 			sqlSession.close();
 		}
-		
-		
+
+	}
+
+	//////////
+
+	public Student selectStudentWithAddressResult(int studId) {
+		if (logger.isDebugEnabled()) {
+			logger.debug("selectStudentWithAddressResult(int) - start");
+		}
+
+		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
+		try {
+			StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+			return studentMapper.selectStudentWithAddressResult(studId);
+		} finally {
+			sqlSession.close();
+		}
+
+	}
+
+	public Student selectStudentWithAddress(int studId) {
+		if (logger.isDebugEnabled()) {
+			logger.debug("selectStudentWithAddress(int) - start");
+		}
+
+		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
+		try {
+			StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+			return studentMapper.selectStudentWithAddress(studId);
+		} finally {
+			sqlSession.close();
+		}
+
 	}
 	
 	public List<Map<String, Object>> findStudentByAllForMap(){

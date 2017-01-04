@@ -1,14 +1,10 @@
 package kr.co.dgit.bigdate.mybatis_dev;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import junit.framework.Assert;
 import kr.co.dgit.bigdate.mybatis_dev.dto.Student;
 import kr.co.dgit.bigdate.mybatis_dev.service.StudentService;
 
@@ -25,13 +21,13 @@ public class StudentServiceTest {
 		studentService = null;
 	}
 
-	@Test
+	/*@Test
 	public void testFindStudentById() {
 		Student student = studentService.findStudentById(1);
 		Assert.assertNotNull(student);
 	}
 
-	/*
+	
 	 * @Test public void testInsertStudent() { Calendar cal =
 	 * Calendar.getInstance();
 	 * 
@@ -84,7 +80,7 @@ public class StudentServiceTest {
 		
 		int delStudent = studentService.deleteStudent(6);
 		Assert.assertSame(1, delStudent);
-	}*/
+	}
 	
 	@Test
 	public void testFindStudentByAll() {
@@ -112,4 +108,18 @@ public class StudentServiceTest {
 		Assert.assertNotNull(student);
 		
 	}
+	
+	//////////
+	@Test
+	public void testSelectStudentWithAddressResult() {
+		Student student = studentService.selectStudentWithAddressResult(1);
+		Assert.assertNotNull(student);
+	}*/
+	
+	@Test
+	public void testSelectStudentWithAddress() {
+		Student student = studentService.selectStudentWithAddress(1);
+		Assert.assertNotNull(student);
+	}
+	
 }

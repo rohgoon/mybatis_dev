@@ -1,5 +1,58 @@
 package kr.co.dgit.bigdate.mybatis_dev.dto;
 
 public class Address {
+
+	private int addrId;
+	private String street;	
+	private String city;
+	private String state;
+	private String zip;
+	private String country;
+	
+	
+	
+	
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public int getAddrId() {
+		return addrId;
+	}
+	public void setAddrId(int addrId) {
+		this.addrId = addrId;
+	}
+	public String getStreet() {
+		return state;
+	}
+	public void setStreet(String street) {
+		this.state = street;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getZip() {
+		return zip;
+	}
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	@Override
+	public String toString() {
+		return String.format("Address [%s, %s, %s, %s, %s, %s]", addrId, street,
+				city, state, zip, country);
+	}
+	
 	
 }
