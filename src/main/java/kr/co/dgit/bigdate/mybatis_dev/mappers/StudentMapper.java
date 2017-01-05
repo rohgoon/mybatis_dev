@@ -22,4 +22,5 @@ public interface StudentMapper {
 	
 
 	int updateSetStudent(Student student);
+	int insertEnumStudent(Student std);
 }

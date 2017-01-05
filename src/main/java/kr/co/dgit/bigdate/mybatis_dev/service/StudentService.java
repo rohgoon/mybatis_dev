@@ -196,4 +196,21 @@ public class StudentService {
 		}
 
 	}
+	
+	public int insertEnumStudent(Student std) {
+		if (logger.isDebugEnabled()) {
+			logger.debug("insertStudent(Student) - start");
+		}
+
+		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
+		try {
+			StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+			int res = studentMapper.insertEnumStudent(std);
+			sqlSession.commit();
+			return res;
+		} finally {
+			sqlSession.close();
+		}
+
+	}
 }
