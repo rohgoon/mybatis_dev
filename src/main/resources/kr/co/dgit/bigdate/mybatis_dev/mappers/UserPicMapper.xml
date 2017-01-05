@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.dgit.bigdate.mybatis_dev.mappers.UserPicMapper">
+	<insert id="insertUserPic" parameterType="userPic">
+		insert into user_pic(name,pic,bio) values (#{name},#{pic},#{bio})	
+	</insert>
+	<select id="getUserPic" parameterType="int" resultType="UserPic">
+		select * from user_pic where id=#{id}
+	</select>
+	
+</mapper>

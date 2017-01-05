@@ -128,7 +128,7 @@ public class StudentServiceTest {
 		GregorianCalendar cal = new GregorianCalendar(1990, 0, 1);
 
 		Student insStd = new Student();
-		insStd.setStudId(6);
+		insStd.setStudId(7);
 		insStd.setName("박경아17");
 		insStd.setEmail("pka17@asd.asd");
 		insStd.setPhone(new PhoneNumber("010-173-1734"));
